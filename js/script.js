@@ -1,17 +1,16 @@
-'use strict'
+"use strict"
 /**
- * This function calculates area and perimeter of a triangle.
+ * This function calculates area of a triangle.
  */
 function calculate () {
   // input
-  const length = parseInt(document.getElementById('length-of-triangle').value)
-  const width = parseInt(document.getElementById('width-of-triangle').value)
+  const height = parseInt(document.getElementById("height-of-triangle").value)
+  const base = parseInt(document.getElementById("base-of-triangle").value)
 
   // process
-  const area = length * width
-  const perimeter = 2 * (length + width)
+  // Instead of dividing the base by two, I multiplied it by 0.5 without any special decimal code and it worked for some reason?
+  const area = base * 0.5 * height
 
   // output
-  document.getElementById('area').innerHTML = 'Area is: ' + area + ' cm²'
-  document.getElementById('perimeter').innerHTML = 'Perimeter is: ' + perimeter + ' cm'
+  document.getElementById("area").innerHTML = "Your triangle's area is: " + area + " cm²"
 }
